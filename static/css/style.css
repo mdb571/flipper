@@ -8,12 +8,12 @@
 
 body {
   font-family: 'Questrial', sans-serif;
-  /* background-color: #fff; */
   height: 100vh;
   margin: 0;
 }
 
 /* Wave Animation Start */
+
 section {
   position: relative;
   width: 100%;
@@ -99,7 +99,6 @@ section .wave.wave4 {
 }
 
 .logo {
-  /* width: 100px; */
   height: 65px;
 }
 
@@ -121,7 +120,10 @@ section .wave.wave4 {
 
 .video-container {
   width: 50%;
-  /* border: 2px solid #fff; */
+}
+
+.video {
+  padding: 0px 20px;
 }
 
 .video-container img {
@@ -137,7 +139,6 @@ section .wave.wave4 {
 .other-container {
   width: 50%;
   height: 100%;
-  /* border: 2px solid green; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -158,7 +159,7 @@ section .wave.wave4 {
 
 .second-img {
   position: absolute;
-  top: 20vh;
+  top: 21vh;
   left: 61vw;
   width: 300px;
 }
@@ -184,4 +185,29 @@ section .wave.wave4 {
 .flip-btn:active {
   margin-top: 7px;
   border-bottom: 3px solid black;
+}
+
+@keyframes rotate2021 {
+  0% {
+    transform: rotate(0deg);
+    top: 21vh;
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotateX(440deg);
+    top: 10vh;
+  }
+
+  75% {
+    transform: rotateX(520deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+
+  }
 }
