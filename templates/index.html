@@ -4,30 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CoinFlipper</title>
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link rel="stylesheet" href="/static/css/progress.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+  <link rel = "icon" href =  
+"/static/assetslogo-header.png  " 
+        type = "image/x-icon"> 
 </head>
 <body>
 
-  <h1 class="heading">Coin Flipper</h1>
-  <div class="main-container">
+  <section class="pattern-diagonal-lines-xl">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+    
+    <img src="/static/assets2021.svg" alt="" class="second-img">
 
-    <div class="video-container">
-      <img src="{{ url_for('video_feed') }}" alt="Live-Stream" id="video">
+    <div class="navbar">
+      <img src="/static/assetslogo-black.png" alt="LOGO" class="logo">
+      <h1 class="heading">Coin Flipper</h1>
     </div>
-
-    <div class="other-container">
-      <div class="result-container">
-        <span id="result" class="result">Click to Flip</span>
+    
+    <div class="main-container">
+    
+      <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Live-Stream" id="video">
       </div>
-        <button onclick="Predict()" class="flip-btn">Flip</button>
+  
+      <div class="other-container">
+        <div class="result-container">
+          <span>Result:</span>
+          <span id="result"  class="result">Heads</span>
+        </div>
+          <button onclick="Predict()"  class="flip-btn">Flip Coin</button>
+      </div>
     </div>
-  </div>
+  </section>
 
 
-  <script src="/static/js/script.js"></script>
+
+  <script src="script.js"></script>
 </body>
-</html>        
+</html>                  
 
 
