@@ -1,7 +1,6 @@
 import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
-from camera_opencv import Camera
 import cv2
 
 

@@ -23,13 +23,20 @@ def gen(camera):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
+
+@app.route('/video_feed')
+def video_feed():
+   
+    return Response(gen(Camera()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
 @app.route('/predict')
 def result():
     score=get_prediction('/home/rmb571/Documents/flask-video-streaming/capture.jpeg').tolist()
     if score[1]>0.5:
         return jsonify({'Predict':'Tails'})
     else:
-         return jsonify({'Predict':'Heads'})
+         return jsonify({'Predict':'Tails'})
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', threaded=True)
